@@ -1,0 +1,16 @@
+# Taste
+- Prefers DeepSeek as the working model and will explicitly ask the agent to switch to it. Confidence: 0.7
+- Uses React with Vite for frontend projects. Confidence: 0.6
+- Scaffolds the project himself before handing off and expects implementation to fit that existing structure rather than being restructured. Confidence: 0.5
+- For unfamiliar third-party services/APIs, expects the agent to research them on the web ("use internet to find out about ...") rather than guessing. Confidence: 0.6
+- When rewriting a file (e.g. prompt.txt), expects all existing fields/sections to be preserved — nothing omitted — and wants the result verified against the original. Confidence: 0.6
+- Values speed: gets impatient when the agent spends a long time on investigation/verification ("what's taking so long?") and wants the working deliverable prioritized over exhaustive end-to-end testing. Confidence: 0.55
+- Provides reference images/screenshots ("demo images") alongside written specs and expects the agent to read and interpret them as part of the requirements. Confidence: 0.45
+- Prefers short, direct answers to status/completion questions ("short answer, is everything done?") over long summaries. Confidence: 0.6
+- Prefers progressive disclosure in UI/forms: fields should only appear when the relevant options are selected, applied as broadly as possible across the form. Confidence: 0.65
+- Prefers deploying projects to Vercel and expects the agent to do the full deployment work (including refactoring anything that won't run there, e.g. Vite middleware → serverless function). Confidence: 0.5
+- Wants forms kept visually lean and not overwhelming — favors trimming clutter (smaller visuals, fewer always-visible inputs, clearer copy). Confidence: 0.55
+- When the agent is blocked on interactive auth (e.g. `vercel login`), he'll run the login step himself and hand control back, expecting the agent to then carry the flow through to completion autonomously ("i did vercel login, try using it"). Confidence: 0.5
+- Expects form fields to use proper native/semantic HTML controls (e.g. a real `type="date"` picker for dates, `type="tel"`/`inputMode` for phone numbers, number inputs for numeric figures) rather than plain text boxes. Confidence: 0.65
+- Expects client-side validation with inline, per-field error messages on forms ("not verified"). Confidence: 0.6
+- When flagging one defect, expects the agent to fix the whole class of similar mistakes across the app ("fix mistakes like these"), not just the single reported instance. Confidence: 0.6

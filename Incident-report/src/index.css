@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-gd-950: #0b2e1f;
+  --color-gd-900: #0f3d2a;
+  --color-gd-800: #134e35;
+  --color-gd-700: #1b5e43;
+  --color-gd-600: #2a7a58;
+  --color-gd-500: #3d8f6b;
+  --color-gd-100: #dcefe5;
+  --color-gd-50: #eef6f1;
+
+  --color-cream: #f6f7f4;
+  --color-ink: #1f2937;
+
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  accent-color: var(--color-gd-800);
+}

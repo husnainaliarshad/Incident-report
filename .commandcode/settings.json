@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(find src public -type f | head -50; echo \"---PKG---\"; cat package.json; echo \"---VITE---\"; cat vite.config.js; echo \"---INDEX---\"; cat index.html; echo \"---MAIN---\"; cat src/main.jsx 2>/dev/null; echo \"---APP---\"; cat src/App.jsx 2>/dev/null; echo \"---CSS---\"; cat src/index.css 2>/dev/null)",
+      "config",
+      "Shell(python3 -c import PIL; print('PIL ok') 2 >& 1)",
+      "Shell(python3 -m pip --version 2 >& 1)",
+      "Shell(mkdir:*)",
+      "Shell(npm:*)",
+      "Shell(node ocr.js 2 >& 1)",
+      "Shell(rm:*)",
+      "Shell(npx oxlint 2 >& 1)",
+      "Shell(ls node_modules/@vitejs 2>&1; echo \"--- omit:\"; npm config get omit; echo \"--- production:\"; npm config get production; echo \"--- NODE_ENV: $NODE_ENV\")",
+      "Shell(agent-browser:*)",
+      "Shell(for:*)",
+      "Shell(do:*)",
+      "Shell(done:*)",
+      "Shell(ls:*)",
+      "Shell(firefox:*)",
+      "Shell(pkill:*)",
+      "Shell(sleep:*)",
+      "Shell(cd \"$COMMANDCODE_SCRATCHPAD\" && npm i jsdom 2>&1 | tail -3 && ls -d node_modules/esbuild 2>/dev/null; ls -d \"/home/bread/Documents/Projects/Incident report/Incident-report/node_modules/esbuild\" 2>/dev/null)",
+      "Shell(npx rolldown --help 2 >& 1)",
+      "Shell(npx rolldown smoke-test.jsx -o /smoke.cjs -f cjs -p node -e jsdom 2 >& 1)",
+      "Shell(pgrep:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}
